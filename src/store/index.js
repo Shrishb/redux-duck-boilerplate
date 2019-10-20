@@ -1,5 +1,8 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
+import * as ducks from './ducks';
 
-const store = createStore();
+const reducers = combineReducers(ducks);
+
+const store = createStore(reducers);
 
 export default store;
